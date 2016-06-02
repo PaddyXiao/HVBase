@@ -64,7 +64,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'HVBase'
-copyright = u'2016, 肖鹏'
+copyright = u'2016, BGI-Internet 大数据中心'
 author = u'肖鹏'
 
 # The version info for the project you're documenting, acts as replacement for

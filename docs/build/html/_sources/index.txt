@@ -3,21 +3,26 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to HVBase's documentation!
+欢迎访问HVBase文档!
 ==================================
 
-内容:
+content:
 
 .. toctree::
    :maxdepth: 2
 
-    数据库模式
-    API
-    工具
+   intro
+   strings
+   datatypes
+   numeric
+   
+   数据库设计
+   API
+   工具
 
 
 
-Indices and tables
+目录
 ==================
 
 * :ref:`genindex`
