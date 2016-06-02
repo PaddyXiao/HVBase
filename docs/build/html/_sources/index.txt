@@ -10,12 +10,6 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-
-   sample
-   intro
-   strings
-   datatypes
-   numeric
    
    数据库设计
    API
