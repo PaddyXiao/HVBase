@@ -6,11 +6,12 @@
 欢迎访问HVBase文档!
 ==================================
 
-content:
+Contents:
 
 .. toctree::
    :maxdepth: 2
 
+   sample
    intro
    strings
    datatypes
