@@ -274,8 +274,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'HVBase.tex', u'HVBase Documentation',
-     u'肖鹏', 'manual'),
+    (master_doc, 'HVBase.tex', u'HVBase 文档',
+     u'BGI-Internet 大数据中心', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
