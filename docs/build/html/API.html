@@ -59,7 +59,7 @@
 <div class="section" id="getvariantsetsidlist">
 <h2>getVariantSetsIDList()<a class="headerlink" href="#getvariantsetsidlist" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/VariantSetsIDList</em></p>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/VariantSetsIDList">/VariantSetsIDList</a></p>
 <ul>
 <li><p class="first">方法描述：查询VariantSet的ID列表</p>
 </li>
@@ -71,7 +71,7 @@
 <dt>结果描述：</dt>
 <dd><ul class="first last">
 <li><dl class="first docutils">
-<dt>VariantSetID</dt>
+<dt>variantSetID</dt>
 <dd><p class="first last">VariantSet ID</p>
 </dd>
 </dl>
@@ -86,31 +86,182 @@
 <div class="section" id="getvariantset-id">
 <h2>getVariantSet(id)<a class="headerlink" href="#getvariantset-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/VariantSets/{id}</em></p>
-<ul class="simple">
-<li>方法描述：通过ID获取VariantSet</li>
-<li>方法参数：id - VariantSet ID</li>
-<li>结果类型：<em>array&lt;map&lt;string, string&gt;&gt;</em></li>
-<li>结果描述：</li>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/VariantSets">/VariantSets/{id}</a></p>
+<ul>
+<li><p class="first">方法描述：通过ID获取VariantSet</p>
+</li>
+<li><p class="first">方法参数：id(string) - VariantSet ID</p>
+</li>
+<li><p class="first">结果类型：<em>array&lt;map&lt;string, string&gt;&gt;</em></p>
+</li>
+<li><dl class="first docutils">
+<dt>结果描述：</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>id(string)</dt>
+<dd><p class="first last">VariantSet ID</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>name(null|string)</dt>
+<dd><p class="first last">VariantSet名称</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>dataSetID(string)</dt>
+<dd><p class="first last">DataSet ID</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>referenceSetID(string)</dt>
+<dd><p class="first last">referenceSet ID</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>metadata(array&lt;map&lt;string, string&gt;&gt;)</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>key(string)</dt>
+<dd><p class="first last">键</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>value(string)</dt>
+<dd><p class="first last">值</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>id(string)</dt>
+<dd><p class="first last">ID</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>description(string)</dt>
+<dd><p class="first last">此元数据的描述信息</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>info(map&lt;string, string&gt;)</dt>
+<dd><p class="first last">键值对结构的信息</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="getvariant-id">
 <h2>getVariant(id)<a class="headerlink" href="#getvariant-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/Variants/{id}</em></p>
-<ul class="simple">
-<li>方法描述：通过ID获取VariantSet</li>
-<li>方法参数：id - 变异ID，格式为：chr-position。示例：chr1-1000002</li>
-<li>结果类型：<em>map&lt;key, value&gt;</em></li>
-<li>结果描述：</li>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/Variants">/Variants/{id}</a></p>
+<ul>
+<li><p class="first">方法描述：通过ID获取VariantSet</p>
+</li>
+<li><p class="first">方法参数：id(string) - 变异ID，格式为：chr-position。示例：chr1-1000002</p>
+</li>
+<li><p class="first">结果类型：<em>map&lt;string, string&gt;</em></p>
+</li>
+<li><dl class="first docutils">
+<dt>结果描述：</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>id(string)</dt>
+<dd><p class="first last">Variant ID</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>variantSetId(string)</dt>
+<dd><p class="first last">VariantSet ID</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>names(array&lt;string&gt;)</dt>
+<dd><p class="first last">Variant名称。示例：RefSNP ID</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>created(null|long)</dt>
+<dd><p class="first last">创建时间，格式为时间戳</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>updated(null|long)</dt>
+<dd><p class="first last">最后更新时间，格式为时间戳</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>referenceName(string)</dt>
+<dd><p class="first last">染色体名称</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>start(long)</dt>
+<dd><p class="first last">染色体起始坐标，0-起始</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>end(long)</dt>
+<dd><p class="first last">染色体终止坐标</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>referenceBases(string)</dt>
+<dd><p class="first last">参考序列碱基</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>alternateBases(array&lt;string&gt;)</dt>
+<dd><p class="first last">变异序列碱基</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>info(map&lt;string, string&gt;)</dt>
+<dd><p class="first last">变异信息</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>calls(array&lt;string&gt;)</dt>
+<dd><p class="first last">基因型</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="getcallsetsidlist">
 <h2>getCallSetsIDList()<a class="headerlink" href="#getcallsetsidlist" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/CallSetsIDList</em></p>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/CallSetsIDList">/CallSetsIDList</a></p>
 <ul>
 <li><p class="first">方法描述：查询CallSet的ID列表</p>
 </li>
@@ -122,7 +273,7 @@
 <dt>结果描述：</dt>
 <dd><ul class="first last">
 <li><dl class="first docutils">
-<dt>CallSetID</dt>
+<dt>callSetID</dt>
 <dd><p class="first last">CallSet ID</p>
 </dd>
 </dl>
@@ -137,31 +288,127 @@
 <div class="section" id="getcallset-id">
 <h2>getCallSet(id)<a class="headerlink" href="#getcallset-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/CallSets/{id}</em></p>
-<ul class="simple">
-<li>方法描述：查询VariantSet的ID列表</li>
-<li>方法参数：id - VariantSet ID</li>
-<li>结果类型：<em>array&lt;map&lt;string, string&gt;&gt;</em></li>
-<li>结果描述：</li>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/CallSets">/CallSets/{id}</a></p>
+<ul>
+<li><p class="first">方法描述：查询VariantSet的ID列表</p>
+</li>
+<li><p class="first">方法参数：id(string) - VariantSet ID</p>
+</li>
+<li><p class="first">结果类型：<em>array&lt;map&lt;string, string&gt;&gt;</em></p>
+</li>
+<li><dl class="first docutils">
+<dt>结果描述：</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>id(string)</dt>
+<dd><p class="first last">CallSet ID</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>name(string)</dt>
+<dd><p class="first last">CallSet名称</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>sampleID(string)</dt>
+<dd><p class="first last">样本ID</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>variantionSetIDs(array&lt;string&gt;)</dt>
+<dd><p class="first last">VariationSet ID列表</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>created(null|long)</dt>
+<dd><p class="first last">创建时间，格式为时间戳</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>updated(null|long)</dt>
+<dd><p class="first last">最后更新时间，格式为时间戳</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>info(map&lt;string, string&gt;)</dt>
+<dd><p class="first last">变异信息</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="getcall-id">
 <h2>getCall(id)<a class="headerlink" href="#getcall-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/Variants/{id}</em></p>
-<ul class="simple">
-<li>方法描述：通过ID获取VariantSet</li>
-<li>方法参数：id - Call ID，格式为：chr-position-sampleID。示例：chr1-1000002-10733</li>
-<li>结果类型：<em>map&lt;key, value&gt;</em></li>
-<li>结果描述：</li>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/Variants">/Variants/{id}</a></p>
+<ul>
+<li><p class="first">方法描述：通过ID获取VariantSet</p>
+</li>
+<li><p class="first">方法参数：id(string) - Call ID，格式为：chr-position-sampleID。示例：chr1-1000002-10733</p>
+</li>
+<li><p class="first">结果类型：<em>map&lt;string, string&gt;</em></p>
+</li>
+<li><dl class="first docutils">
+<dt>结果描述：</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>callSetID</dt>
+<dd><p class="first last">CallSet ID</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>callSetName</dt>
+<dd><p class="first last">CallSet名称</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>genotype(array&lt;int&gt;)</dt>
+<dd><p class="first last">基因型，格式参照VCF</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>phaseset(null|string)</dt>
+<dd><p class="first last">基因型状态</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>genotypeLikelihood(array&lt;double&gt;)</dt>
+<dd><p class="first last">基因型频率</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>info(map&lt;string, string&gt;)</dt>
+<dd><p class="first last">变异信息</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="getethnicitylist">
 <h2>getEthnicityList()<a class="headerlink" href="#getethnicitylist" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/EthnicityList</em></p>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/EthnicityList">/EthnicityList</a></p>
 <ul>
 <li><p class="first">方法描述：查询种族列表</p>
 </li>
