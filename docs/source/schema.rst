@@ -14,7 +14,7 @@
         
     * 样本与样本关系
         样本与样本之间的关系通过一位向量存储，方向统一为辈分从大到小，具体方式如下：
-        I1 ----[``relation``]---> I2
+        I1 ---``relation``---> I2
         其中relation可选值为：
         * _grandpa_of_
         * _grandma_of_

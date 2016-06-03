@@ -52,15 +52,27 @@
             
   <div class="section" id="api">
 <h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>HVBase API基于GA4GH标准设计，采用RESTful框架开发。</li>
+<li>所有方法的链接地址为：<a class="reference external" href="http://bigdata.genomics.cn:5000">http://bigdata.genomics.cn:5000</a></li>
+</ul>
+<div class="section" id="getvariantsetsidlist">
+<h2>getVariantSetsIDList()<a class="headerlink" href="#getvariantsetsidlist" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>HVBase API基于GA4GH标准设计，采用RESTful框架开发。</div></blockquote>
-<div class="section" id="id1">
-<h2>地址<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div>所有方法的链接地址为：<a class="reference external" href="http://bigdata.genomics.cn:5000">http://bigdata.genomics.cn:5000</a></div></blockquote>
+<div><code class="docutils literal"><span class="pre">GET</span></code> <em>/VariantSetsIDList</em>
+* 方法描述：查询VariantSet的ID列表
+* 方法参数：None
+* 结果类型：<em>array&lt;string&gt;</em>
+* 结果描述：</div></blockquote>
 </div>
-<div class="section" id="getvariantsetsid">
-<h2>getVariantSetsID()<a class="headerlink" href="#getvariantsetsid" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="getvariantset-id">
+<h2>getVariantSet(id)<a class="headerlink" href="#getvariantset-id" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">GET</span></code> <em>/VariantSets/{id}</em>
+* 方法描述：查询VariantSet的ID列表
+* 方法参数：id - VariantSet ID
+* 结果类型：<em>array&lt;map&lt;string, string&gt;&gt;</em>
+* 结果描述：</div></blockquote>
 </div>
 </div>
 
@@ -73,8 +85,8 @@
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">API</a><ul>
-<li><a class="reference internal" href="#id1">地址</a></li>
-<li><a class="reference internal" href="#getvariantsetsid">getVariantSetsID()</a></li>
+<li><a class="reference internal" href="#getvariantsetsidlist">getVariantSetsIDList()</a></li>
+<li><a class="reference internal" href="#getvariantset-id">getVariantSet(id)</a></li>
 </ul>
 </li>
 </ul>
