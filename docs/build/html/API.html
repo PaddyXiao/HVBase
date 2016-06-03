@@ -59,20 +59,131 @@
 <div class="section" id="getvariantsetsidlist">
 <h2>getVariantSetsIDList()<a class="headerlink" href="#getvariantsetsidlist" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><code class="docutils literal"><span class="pre">GET</span></code> <em>/VariantSetsIDList</em>
-* 方法描述：查询VariantSet的ID列表
-* 方法参数：None
-* 结果类型：<em>array&lt;string&gt;</em>
-* 结果描述：</div></blockquote>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/VariantSetsIDList</em></p>
+<ul>
+<li><p class="first">方法描述：查询VariantSet的ID列表</p>
+</li>
+<li><p class="first">方法参数：None</p>
+</li>
+<li><p class="first">结果类型：<em>array&lt;string&gt;</em></p>
+</li>
+<li><dl class="first docutils">
+<dt>结果描述：</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>VariantSetID</dt>
+<dd><p class="first last">VariantSet ID</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
 </div>
 <div class="section" id="getvariantset-id">
 <h2>getVariantSet(id)<a class="headerlink" href="#getvariantset-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><code class="docutils literal"><span class="pre">GET</span></code> <em>/VariantSets/{id}</em>
-* 方法描述：查询VariantSet的ID列表
-* 方法参数：id - VariantSet ID
-* 结果类型：<em>array&lt;map&lt;string, string&gt;&gt;</em>
-* 结果描述：</div></blockquote>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/VariantSets/{id}</em></p>
+<ul class="simple">
+<li>方法描述：通过ID获取VariantSet</li>
+<li>方法参数：id - VariantSet ID</li>
+<li>结果类型：<em>array&lt;map&lt;string, string&gt;&gt;</em></li>
+<li>结果描述：</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="getvariant-id">
+<h2>getVariant(id)<a class="headerlink" href="#getvariant-id" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/Variants/{id}</em></p>
+<ul class="simple">
+<li>方法描述：通过ID获取VariantSet</li>
+<li>方法参数：id - 变异ID，格式为：chr-position。示例：chr1-1000002</li>
+<li>结果类型：<em>map&lt;key, value&gt;</em></li>
+<li>结果描述：</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="getcallsetsidlist">
+<h2>getCallSetsIDList()<a class="headerlink" href="#getcallsetsidlist" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/CallSetsIDList</em></p>
+<ul>
+<li><p class="first">方法描述：查询CallSet的ID列表</p>
+</li>
+<li><p class="first">方法参数：None</p>
+</li>
+<li><p class="first">结果类型：<em>array&lt;string&gt;</em></p>
+</li>
+<li><dl class="first docutils">
+<dt>结果描述：</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>CallSetID</dt>
+<dd><p class="first last">CallSet ID</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="getcallset-id">
+<h2>getCallSet(id)<a class="headerlink" href="#getcallset-id" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/CallSets/{id}</em></p>
+<ul class="simple">
+<li>方法描述：查询VariantSet的ID列表</li>
+<li>方法参数：id - VariantSet ID</li>
+<li>结果类型：<em>array&lt;map&lt;string, string&gt;&gt;</em></li>
+<li>结果描述：</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="getcall-id">
+<h2>getCall(id)<a class="headerlink" href="#getcall-id" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/Variants/{id}</em></p>
+<ul class="simple">
+<li>方法描述：通过ID获取VariantSet</li>
+<li>方法参数：id - Call ID，格式为：chr-position-sampleID。示例：chr1-1000002-10733</li>
+<li>结果类型：<em>map&lt;key, value&gt;</em></li>
+<li>结果描述：</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="getethnicitylist">
+<h2>getEthnicityList()<a class="headerlink" href="#getethnicitylist" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <em>/EthnicityList</em></p>
+<ul>
+<li><p class="first">方法描述：查询种族列表</p>
+</li>
+<li><p class="first">方法参数：None</p>
+</li>
+<li><p class="first">结果类型：<em>array&lt;string&gt;</em></p>
+</li>
+<li><dl class="first docutils">
+<dt>结果描述：</dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>Ethnicity</dt>
+<dd><p class="first last">种族</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 
@@ -87,6 +198,11 @@
 <li><a class="reference internal" href="#">API</a><ul>
 <li><a class="reference internal" href="#getvariantsetsidlist">getVariantSetsIDList()</a></li>
 <li><a class="reference internal" href="#getvariantset-id">getVariantSet(id)</a></li>
+<li><a class="reference internal" href="#getvariant-id">getVariant(id)</a></li>
+<li><a class="reference internal" href="#getcallsetsidlist">getCallSetsIDList()</a></li>
+<li><a class="reference internal" href="#getcallset-id">getCallSet(id)</a></li>
+<li><a class="reference internal" href="#getcall-id">getCall(id)</a></li>
+<li><a class="reference internal" href="#getethnicitylist">getEthnicityList()</a></li>
 </ul>
 </li>
 </ul>
