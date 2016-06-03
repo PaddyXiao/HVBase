@@ -1,25 +1,12 @@
-This is a Title
+API
 ===============
-That has a paragraph about a main subject and is set when the '='
-is at least the same length of the title itself.
+    HVBase API基于GA4GH标准设计，采用RESTful框架开发。
 
-Subject Subtitle
+地址
 ----------------
-Subtitles are set with '-' and are required to have the same length 
-of the subtitle itself, just like titles.
+    所有方法的链接地址为：`http://bigdata.genomics.cn:5000<http://bigdata.genomics.cn:5000>`_
 
-Lists can be unnumbered like:
+getVariantSetsID()
+----------------
 
- * Item Foo
- * Item Bar
 
-Or automatically numbered:
-
- #. Item 1
- #. Item 2
-
-Inline Markup
--------------
-Words can have *emphasis in italics* or be **bold** and you can define
-code samples with back quotes, like when you talk about a command: ``sudo`` 
-gives you super user powers!

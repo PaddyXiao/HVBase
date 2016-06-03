@@ -11,9 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
-   数据库设计
+   introduction
+   schema
    API
-   工具
+   tool
 
 
 
