@@ -20,6 +20,7 @@ class HVBase:
     __callSetsIDList = [];
     __variantSetsIDList = [];
     __variantSetsIDMap = {};
+    __ethnicityList = [];
     
     def __init__(self):
         self.setAll();
@@ -38,7 +39,7 @@ class HVBase:
     
         # scan.filterString = "RowFilter(=,'regexstring:\d+')";
         # scanID = self.ph.client.scannerOpenWithScan(table, self.scan, None);
-        scanID = self.ph.client.scannerOpenWithStop(table, str(start), str(end), ['sample:name', 'sample:source'], None);
+        scanID = self.ph.client.scannerOpenWithStop(table, str(start), str(end), ['sample:name', 'sample:source', 'sample:ethnicity'], None);
         
         qr = self.ph.client.scannerGetList(scanID, end);
         if qr:
@@ -47,6 +48,11 @@ class HVBase:
                 sampleID = r.row;
                 sampleName = r.columns.get("sample:name").value;
                 variantSetID = r.columns.get("sample:source").value;
+                ethnicity = r.columns.get("sample:ethnicity").value;
+                
+                if ethnicity not in self.__ethnicityList:
+                    self.__ethnicityList.append(ethnicity);
+                
                 if variantSetID not in self.__variantSetsIDList:
                     self.__variantSetsIDList.append(variantSetID);
                 self.__callSetsIDList.append({sampleID:sampleName});
@@ -57,6 +63,9 @@ class HVBase:
                 self.__variantSetsIDMap[variantSetID].append({sampleID:sampleName});
         # self.__variantSetsIDList = self.__variantSetsIDMap.keys();
         # print self.__variantSetsIDList;
+    
+    def getEthnicityList(self):
+        return self.__ethnicityList;
         
     def getSampleCount(self):
         return self.__sampleCount;
@@ -93,10 +102,6 @@ class HVBase:
             for r in qr:
                 records = r.columns.get('sample:record').value
         return records;
-    
-    # Get a list of VariantSets ID
-    def getVariantSetsIDList(self):
-        pass;
     
     # Gets a list of VariantSet matching the search criteria.
     def searchVariantSets(criteria):

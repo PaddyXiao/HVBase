@@ -114,7 +114,7 @@ getCallSet(id)
     
 getCall(id)
 -----------------------
-    ``GET`` `/Calls/{id} <http://bigdata.genomics.cn:5000/Variants>`_
+    ``GET`` `/Calls/{id} <http://bigdata.genomics.cn:5000/Calls>`_
     
     - 方法描述：通过ID获取VariantSet
     - 方法参数：id(string) - Call ID，格式为：chr-position-sampleID。示例：chr1-1000002-10733

@@ -40,8 +40,9 @@ def main():
     # print count;
 
     # print hvb.getSampleCount();
+    print hvb.getEthnicityList();
     # print hvb.getCallSetsIDList();
-    print hvb.getVariantSetsIDList();
+    # print hvb.getVariantSetsIDList();
     # print hvb.getVariantSetsIDMap();
     py.close();
     pass;
