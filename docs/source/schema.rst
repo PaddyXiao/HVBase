@@ -1,25 +1,26 @@
-模式
+设计模式
 ===============
-That has a paragraph about a main subject and is set when the '='
-is at least the same length of the title itself.
+    
 
 数据库模式
 ----------------
-Subtitles are set with '-' and are required to have the same length 
-of the subtitle itself, just like titles.
-
-Lists can be unnumbered like:
-
- * Item Foo
- * Item Bar
-
-Or automatically numbered:
-
- #. Item 1
- #. Item 2
+    HVBase主要存储了样本表型、样本基因型以及样本与样本之间的关系信息。
 
 数据模式
 -------------
-Words can have *emphasis in italics* or be **bold** and you can define
-code samples with back quotes, like when you talk about a command: ``sudo`` 
-gives you super user powers!
+    * 样本表型
+        
+    * 样本基因型
+        
+    * 样本与样本关系
+        样本与样本之间的关系通过一位向量存储，方向统一为辈分从大到小，具体方式如下：
+        I1 ----[``relation``]---> I2
+        其中relation可选值为：
+        * _grandpa_of_
+        * _grandma_of_
+        * _father_of_
+        * _mother_of_
+        * _uncle_of_
+        * _aunt_of_
+        * _brother_of_
+        * _sister_of_

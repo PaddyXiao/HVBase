@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>模式 &mdash; HVBase 0.1.0a documentation</title>
+    <title>设计模式 &mdash; HVBase 0.1.0a documentation</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -51,33 +51,38 @@
           <div class="body" role="main">
             
   <div class="section" id="id1">
-<h1>模式<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>That has a paragraph about a main subject and is set when the &#8216;=&#8217;
-is at least the same length of the title itself.</p>
+<h1>设计模式<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
 <h2>数据库模式<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>Subtitles are set with &#8216;-&#8216; and are required to have the same length
-of the subtitle itself, just like titles.</p>
-<p>Lists can be unnumbered like:</p>
 <blockquote>
-<div><ul class="simple">
-<li>Item Foo</li>
-<li>Item Bar</li>
-</ul>
-</div></blockquote>
-<p>Or automatically numbered:</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li>Item 1</li>
-<li>Item 2</li>
-</ol>
-</div></blockquote>
+<div>HVBase主要存储了样本表型、样本基因型以及样本与样本之间的关系信息。</div></blockquote>
 </div>
 <div class="section" id="id3">
 <h2>数据模式<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>Words can have <em>emphasis in italics</em> or be <strong>bold</strong> and you can define
-code samples with back quotes, like when you talk about a command: <code class="docutils literal"><span class="pre">sudo</span></code>
-gives you super user powers!</p>
+<blockquote>
+<div><ul>
+<li><p class="first">样本表型</p>
+</li>
+<li><p class="first">样本基因型</p>
+</li>
+<li><dl class="first docutils">
+<dt>样本与样本关系</dt>
+<dd><p class="first last">样本与样本之间的关系通过一位向量存储，方向统一为辈分从大到小，具体方式如下：
+I1 &#8212;-[<code class="docutils literal"><span class="pre">relation</span></code>]&#8212;&gt; I2
+其中relation可选值为：
+* _grandpa_of_
+* _grandma_of_
+* _father_of_
+* _mother_of_
+* _uncle_of_
+* _aunt_of_
+* _brother_of_
+* _sister_of_</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 
@@ -89,7 +94,7 @@ gives you super user powers!</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">模式</a><ul>
+<li><a class="reference internal" href="#">设计模式</a><ul>
 <li><a class="reference internal" href="#id2">数据库模式</a></li>
 <li><a class="reference internal" href="#id3">数据模式</a></li>
 </ul>

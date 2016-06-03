@@ -4,7 +4,7 @@ API
 
 地址
 ----------------
-    所有方法的链接地址为：`http://bigdata.genomics.cn:5000<http://bigdata.genomics.cn:5000>`_
+    所有方法的链接地址为：http://bigdata.genomics.cn:5000
 
 getVariantSetsID()
 ----------------
