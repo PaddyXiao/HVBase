@@ -13,8 +13,9 @@ Contents:
    
    introduction
    schema
-   API
+   api
    tool
+   faq
 
 
 
