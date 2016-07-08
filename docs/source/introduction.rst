@@ -1,3 +1,5 @@
+.. _introduction_index:
+
 介绍
 ===============
     - HVBase（Human Variation Base）是基于海量变异数据构建的人类变异库。

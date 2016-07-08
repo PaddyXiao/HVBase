@@ -1,3 +1,5 @@
+.. _api_index:
+
 API
 ===============
 * HVBase API基于GA4GH标准设计，采用RESTful框架开发。
@@ -46,7 +48,7 @@ getVariantSet(id)
         
 getVariant(id)
 -----------------------
-    ``GET`` `/Variants/{id} <http://bigdata.genomics.cn:5000/Variants>`_
+    ``GET`` `/Variants/{id} <http://bigdata.genomics.cn:5000/Variants/>`_
     
     - 方法描述：通过ID获取VariantSet
     - 方法参数：id(string) - 变异ID，格式为：chr-position。示例：chr1-1000002
@@ -91,7 +93,7 @@ getCallSetsIDList()
             
 getCallSet(id)
 -----------------------
-    ``GET`` `/CallSets/{id} <http://bigdata.genomics.cn:5000/CallSets>`_
+    ``GET`` `/CallSets/{id} <http://bigdata.genomics.cn:5000/CallSets/>`_
     
     - 方法描述：查询VariantSet的ID列表
     - 方法参数：id(string) - VariantSet ID
@@ -114,7 +116,7 @@ getCallSet(id)
     
 getCall(id)
 -----------------------
-    ``GET`` `/Calls/{id} <http://bigdata.genomics.cn:5000/Calls>`_
+    ``GET`` `/Calls/{id} <http://bigdata.genomics.cn:5000/Calls/>`_
     
     - 方法描述：通过ID获取VariantSet
     - 方法参数：id(string) - Call ID，格式为：chr-position-sampleID。示例：chr1-1000002-10733
@@ -143,6 +145,16 @@ getEthnicityList()
     - 结果描述：
         - Ethnicity
             种族
+            
+getPhenotype()
+-----------------------
+    ``GET`` `/Phenotypes/<id> <http://bigdata.genomics.cn:5000/Phenotypes/>`_
+    
+    - 方法描述：查询样本表型
+    - 方法参数：id(string) - 样本ID
+    - 结果类型：map<string, string>
+    - 结果描述：
+        参见 http://hvbase.readthedocs.io/zh_CN/latest/schema.html 样本表型
     
         
 

@@ -51,7 +51,7 @@
           <div class="body" role="main">
             
   <div class="section" id="api">
-<h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<span id="api-index"></span><h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li>HVBase API基于GA4GH标准设计，采用RESTful框架开发。</li>
 <li>所有方法的链接地址为：<a class="reference external" href="http://bigdata.genomics.cn:5000">http://bigdata.genomics.cn:5000</a></li>
@@ -168,7 +168,7 @@
 <div class="section" id="getvariant-id">
 <h2>getVariant(id)<a class="headerlink" href="#getvariant-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/Variants">/Variants/{id}</a></p>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/Variants/">/Variants/{id}</a></p>
 <ul>
 <li><p class="first">方法描述：通过ID获取VariantSet</p>
 </li>
@@ -288,7 +288,7 @@
 <div class="section" id="getcallset-id">
 <h2>getCallSet(id)<a class="headerlink" href="#getcallset-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/CallSets">/CallSets/{id}</a></p>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/CallSets/">/CallSets/{id}</a></p>
 <ul>
 <li><p class="first">方法描述：查询VariantSet的ID列表</p>
 </li>
@@ -351,7 +351,7 @@
 <div class="section" id="getcall-id">
 <h2>getCall(id)<a class="headerlink" href="#getcall-id" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/Calls">/Calls/{id}</a></p>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/Calls/">/Calls/{id}</a></p>
 <ul>
 <li><p class="first">方法描述：通过ID获取VariantSet</p>
 </li>
@@ -432,6 +432,26 @@
 </ul>
 </div></blockquote>
 </div>
+<div class="section" id="getphenotype">
+<h2>getPhenotype()<a class="headerlink" href="#getphenotype" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">GET</span></code> <a class="reference external" href="http://bigdata.genomics.cn:5000/Phenotypes/">/Phenotypes/&lt;id&gt;</a></p>
+<ul>
+<li><p class="first">方法描述：查询样本表型</p>
+</li>
+<li><p class="first">方法参数：id(string) - 样本ID</p>
+</li>
+<li><p class="first">结果类型：map&lt;string, string&gt;</p>
+</li>
+<li><dl class="first docutils">
+<dt>结果描述：</dt>
+<dd><p class="first last">参见 <a class="reference external" href="http://hvbase.readthedocs.io/zh_CN/latest/schema.html">http://hvbase.readthedocs.io/zh_CN/latest/schema.html</a> 样本表型</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -450,6 +470,7 @@
 <li><a class="reference internal" href="#getcallset-id">getCallSet(id)</a></li>
 <li><a class="reference internal" href="#getcall-id">getCall(id)</a></li>
 <li><a class="reference internal" href="#getethnicitylist">getEthnicityList()</a></li>
+<li><a class="reference internal" href="#getphenotype">getPhenotype()</a></li>
 </ul>
 </li>
 </ul>
