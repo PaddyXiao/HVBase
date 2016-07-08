@@ -13,7 +13,7 @@ Contents:
    
    introduction
    schema
-   api
+   API
    tool
    faq
 
