@@ -13,7 +13,7 @@ Contents:
    
    introduction
    schema
-   API
+   application_interace
    tool
    faq
 
