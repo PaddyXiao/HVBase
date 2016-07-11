@@ -157,6 +157,11 @@ getPhenotype()
         参见 http://hvbase.readthedocs.io/zh_CN/latest/schema.html 样本表型
     
         
+Python 示例
+------------------------
 
+.. literalinclude:: _static/HVBaseAPI.example.py
+    :language: python
+    :linenos:    
         
         
