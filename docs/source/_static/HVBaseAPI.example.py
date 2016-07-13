@@ -20,10 +20,18 @@ def main():
     variantID = chromosome + '-' + str(pos);
     callID = variantID + '-' + str(sampleID);
     
+    variantSetID = '1000genomes';
+    
     clock('start');
     
     # getVariantSetsIDList()
     url = urlPrefix + '/VariantSetsIDList';
+    clock('getVariantSetsIDList() - ' + url);
+    content = urllib.urlopen(url);
+    result = content.read();
+    
+    # getVariantSetCallSetsIDList()
+    url = urlPrefix + '/VariantSetCallSetsIDList/' + variantSetID;
     clock('getVariantSetsIDList() - ' + url);
     content = urllib.urlopen(url);
     result = content.read();

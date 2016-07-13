@@ -45,7 +45,24 @@ getVariantSet(id)
             - info(map<string, string>)
                 键值对结构的信息
                 
-        
+
+getVariantSetCallSetsIDList(VariantSetID)
+-----------------------
+    ``GET`` `/VariantSetCallSetsIDList/{VariantSetID} <http://bigdata.genomics.cn:5000/VariantSetCallSetsIDList/1000genomes>`_
+    
+    - 方法描述：通过ID获取VariantSet
+    - 方法参数：id(string) - VariantSet ID
+    - 结果类型：*array<map<string, string>>*
+    - 结果描述：
+        - variantSetID(string)
+            VariantSet ID
+        - callSetsIDList(array<map<string, string>>)
+            - key(string)
+                callSetID
+            - value(string)
+                callSetName
+                    
+    
 getVariant(id)
 -----------------------
     ``GET`` `/Variants/{id} <http://bigdata.genomics.cn:5000/Variants/>`_
