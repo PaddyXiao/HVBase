@@ -47,7 +47,7 @@ getVariantSet(id)
                 
 
 getVariantSetCallSetsIDList(VariantSetID)
------------------------
+-------------------------------------------
     ``GET`` `/VariantSetCallSetsIDList/{VariantSetID} <http://bigdata.genomics.cn:5000/VariantSetCallSetsIDList/1000genomes>`_
     
     - 方法描述：通过ID获取VariantSet
